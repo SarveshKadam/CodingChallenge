@@ -1,107 +1,137 @@
-*{
-    background: #E5E5E5;
+:root {
+  --star-size: 40px;
+  --star-color: #e0e0e0;
+  --star-background: #ffcd69;
+  --container-color: #ffffff;
+  --black: #000000;
 }
 
-.homepage{
-    position: relative;
-    min-height: 80vh;
-    min-width: 50vw;
-    background: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    margin-top: 2%;
+* {
+  background: #e5e5e5;
+  position: relative;
 }
 
-.final-container{
-    display: flex;
-    justify-content: space-between;
-    background: #FFFFFF;
-
+body {
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Roboto;
 }
 
-.final-child{
-    background: #FFFFFF;
+.homepage {
+  position: relative;
+  min-height: 80vh;
+  min-width: 50vw;
+  background: var(--container-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
 }
 
-.home-heading{
-/* position: absolute; */
-/* width: 564px; */
-height: 52px;
-text-align: center;
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 44px;
-line-height: 52px;
-/* margin-left: 10%;
-margin-right: auto; */
-background: #FFFFFF;
-color: #000000;
+.final-container {
+  display: flex;
+  justify-content: space-between;
+  background: var(--container-color);
 }
 
-.home-container{
-    margin-right: auto;
-    margin-left: auto;
-    background: #FFFFFF;
+.final-child {
+  background: var(--container-color);
 }
 
-.final-rate{
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 44px;
-line-height: 52px;
-color: #000000;
-background: #FFFFFF;
-
+.home-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 52px;
+  background: var(--container-color);
+  color: var(--black);
 }
 
-.star-group{
-    width: 170px;
-    height: 20px;
-    background: #FFFFFF;
+.home-container {
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--container-color);
 }
 
-img{
-    background: #FFFFFF;
+.final-rate {
+  font-size: 44px;
+  line-height: 52px;
+  color: var(--black);
+  background: var(--container-color);
+  vertical-align: middle;
 }
 
-.btn{
-    font-size: 20px;
-    line-height: 20px;
-    background: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    box-sizing: border-box;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    margin-top: 3px;
-    cursor: pointer;
-
+.btn {
+  font-size: 20px;
+  line-height: 20px;
+  background: var(--container-color);
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-top: 3px;
+  cursor: pointer;
+  padding: 4px;
+  text-decoration: none;
 }
 
-.final-child-btn{
-    margin-top: 16px;
-    background: #FFFFFF;
-
+.final-child-btn {
+  margin-top: 16px;
+  background: var(--container-color);
 }
 
-.solid-line{
-    border-top: 1px solid #bbb;
+.solid-line {
+  border-top: 1px solid #bbb;
 }
 
-.review-list{
-    background-color: #FFFFFF;
+.review-list {
+  background-color: #ffffff;
 }
 
-.sub-heading{
-    background-color: #FFFFFF;
-    color: #000000;
-font-weight: bold;
-font-size: 28px;
-line-height: 33px;
+.sub-heading {
+  background-color: #ffffff;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
 }
 
-span{
-    background-color: #FFFFFF;
-    text-align: center;
+span {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  background-color: #ffffff;
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.Stars::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--star-background) var(--percent),
+    var(--star-color) var(--percent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+strong {
+  background-color: #ffffff;
+}
+
+.review-text > span {
+  margin-left: 5px;
+  font-size: 18px;
+  vertical-align: middle;
 }

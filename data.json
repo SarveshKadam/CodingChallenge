@@ -1,0 +1,17 @@
+{
+  "review_data": [
+    {
+      "rating": 4,
+      "review": "Book was full of fluff"
+    },
+    {
+      "rating": 3,
+      "review": "Book was full"
+    },
+    {
+      "rating": 4,
+      "review": "Book was amazing"
+    }
+  ],
+  "overall_rating": 3.8
+}
